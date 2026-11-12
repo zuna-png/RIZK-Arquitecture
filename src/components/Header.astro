@@ -1,0 +1,104 @@
+---
+import Logo from './Logo.astro';
+import { navOrder, path, useTranslations, type Lang, type RouteKey } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  current: RouteKey;
+}
+const { lang, current } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<header class="sticky top-0 z-40 border-b border-carbon/10 bg-marfil/90 backdrop-blur-md">
+  <div class="wrap flex h-16 items-center justify-between md:h-20">
+    <a href={path('home', lang)} aria-label="Rizk — {t('nav.home')}">
+      <Logo />
+    </a>
+
+    <nav aria-label="Principal" class="hidden md:block">
+      <ul class="flex gap-10">
+        {
+          navOrder.map((key) => (
+            <li>
+              <a
+                href={path(key, lang)}
+                class="label link-underline py-1"
+                aria-current={key === current ? 'page' : undefined}
+              >
+                {t(`nav.${key}`)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <button
+      type="button"
+      class="label md:hidden"
+      data-menu-open
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      {t('nav.menu')}
+    </button>
+  </div>
+</header>
+
+<!-- Menú móvil a pantalla completa -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-50 flex flex-col bg-marfil opacity-0 transition-opacity duration-500 ease-soft pointer-events-none md:hidden data-[open]:pointer-events-auto data-[open]:opacity-100"
+  inert
+>
+  <div class="wrap flex h-16 items-center justify-between border-b border-carbon/10">
+    <Logo />
+    <button type="button" class="label" data-menu-close>{t('nav.close')}</button>
+  </div>
+  <nav aria-label="Móvil" class="wrap flex flex-1 flex-col justify-center">
+    <ul class="space-y-4">
+      {
+        navOrder.map((key, i) => (
+          <li class="flex items-baseline gap-5">
+            <span class="label text-piedra">{String(i + 1).padStart(2, '0')}.</span>
+            <a
+              href={path(key, lang)}
+              class="text-4xl font-light tracking-tight aria-[current=page]:text-oliva"
+              aria-current={key === current ? 'page' : undefined}
+            >
+              {t(`nav.${key}`)}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</div>
+
+<script>
+  // Se re-inicializa en cada navegación (View Transitions).
+  document.addEventListener('astro:page-load', () => {
+    const menu = document.getElementById('mobile-menu');
+    const openBtn = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+    const closeBtn = document.querySelector<HTMLButtonElement>('[data-menu-close]');
+    if (!menu || !openBtn || !closeBtn) return;
+
+    const setOpen = (open: boolean) => {
+      menu.toggleAttribute('data-open', open);
+      menu.inert = !open;
+      openBtn.setAttribute('aria-expanded', String(open));
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+      (open ? closeBtn : openBtn).focus();
+    };
+
+    openBtn.addEventListener('click', () => setOpen(true));
+    closeBtn.addEventListener('click', () => setOpen(false));
+    menu.addEventListener('keydown', (e) => e.key === 'Escape' && setOpen(false));
+  });
+
+  // Cerrar y liberar scroll antes de cambiar de página.
+  document.addEventListener('astro:before-swap', () => {
+    document.documentElement.style.overflow = '';
+  });
+</script>

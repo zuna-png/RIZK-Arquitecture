@@ -1,0 +1,11 @@
+orden: 5
+tipo: visualizacion
+categoria: rehabilitacion
+vista: exterior
+portada: ./img/patio-de-arcos.jpg
+es:
+  titulo: Patio de Arcos
+  descripcion: Un patio central rodeado de arcos y columnas esbeltas. La luz baña los muros y lleva la mirada hacia el fondo del claustro.
+en:
+  titulo: Courtyard of Arches
+  descripcion: A central courtyard framed by arches and slender columns. Light washes the walls and draws the eye to the far end of the cloister.

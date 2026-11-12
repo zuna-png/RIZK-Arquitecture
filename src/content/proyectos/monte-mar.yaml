@@ -1,0 +1,11 @@
+orden: 2
+tipo: visualizacion
+categoria: vivienda-vertical
+vista: exterior
+portada: ./img/monte-mar.jpg
+es:
+  titulo: Monte Mar
+  descripcion: Edificio de departamentos frente a la bahía. Fachada de concreto claro con jardineras en cada nivel y cortinas que suavizan la luz del atardecer.
+en:
+  titulo: Monte Mar
+  descripcion: An apartment building facing the bay. A pale concrete façade with planters on every level and curtains that soften the evening light.

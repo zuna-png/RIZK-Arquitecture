@@ -1,0 +1,11 @@
+orden: 10
+tipo: visualizacion
+categoria: residencial
+vista: exterior
+portada: ./img/torre-ladrillo.jpg
+es:
+  titulo: Casa Ladrillo
+  descripcion: Estructura esbelta de ladrillo y vidrio, con terrazas ajardinadas que trepan por la fachada y dejan entrar el bosque.
+en:
+  titulo: Brick House
+  descripcion: A slender brick-and-glass structure, with planted terraces climbing the façade and letting the forest in.

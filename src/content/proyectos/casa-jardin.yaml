@@ -1,0 +1,11 @@
+orden: 4
+tipo: visualizacion
+categoria: vivienda-vertical
+vista: exterior
+portada: ./img/casa-jardin.jpg
+es:
+  titulo: Casa Jardín
+  descripcion: Edificio de pocos niveles con balcones de herrería y muros cubiertos de enredaderas. Una escalera abierta une los departamentos con el patio arbolado.
+en:
+  titulo: Garden House
+  descripcion: A low-rise building with iron balconies and vine-covered walls. An open stair links the apartments to the tree-lined courtyard.

@@ -1,0 +1,11 @@
+orden: 3
+tipo: visualizacion
+categoria: comercial
+vista: interior
+portada: ./img/chamuyo.jpg
+es:
+  titulo: Chamuyo
+  descripcion: Restaurante de carácter industrial. Estructura expuesta, lámparas suspendidas y un mural de montañas que domina el salón.
+en:
+  titulo: Chamuyo
+  descripcion: A restaurant with an industrial character. Exposed structure, pendant lamps and a mountain mural presiding over the dining room.

@@ -1,0 +1,24 @@
+---
+// Vista temporal para las secciones aún no construidas (Fase 1).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { navOrder, useTranslations, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  route: 'walkthroughs' | 'studio' | 'contact';
+}
+const { lang, route } = Astro.props;
+const t = useTranslations(lang);
+const title = t(`nav.${route}`);
+const number = String(navOrder.indexOf(route) + 1).padStart(2, '0');
+---
+
+<BaseLayout lang={lang} route={route} title={title} description={t(`page.${route}.intro`)}>
+  <PageIntro number={number} label={title} title={title} intro={t(`page.${route}.intro`)} />
+  <section class="wrap pb-24">
+    <div class="flex aspect-[16/7] items-center justify-center border border-dashed border-carbon/20">
+      <span class="label text-piedra">{t('soon')}</span>
+    </div>
+  </section>
+</BaseLayout>

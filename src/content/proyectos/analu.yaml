@@ -1,0 +1,11 @@
+orden: 13
+tipo: visualizacion
+categoria: residencial
+vista: aerea
+portada: ./img/analu.jpg
+es:
+  titulo: Analú
+  descripcion: Conjunto residencial de baja altura, organizado alrededor de patios y áreas verdes que ordenan la vida en común.
+en:
+  titulo: Analú
+  descripcion: A low-rise residential complex organised around courtyards and green spaces that shape shared life.

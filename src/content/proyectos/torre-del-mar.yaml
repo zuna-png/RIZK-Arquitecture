@@ -1,0 +1,11 @@
+orden: 6
+tipo: visualizacion
+categoria: vivienda-vertical
+vista: exterior
+portada: ./img/torre-del-mar.jpg
+es:
+  titulo: Torre del Mar
+  descripcion: Retícula de concreto en tono terracota con balcones profundos y vegetación en la azotea. Las vistas se abren al mar y a la sierra.
+en:
+  titulo: Torre del Mar
+  descripcion: A terracotta-toned concrete grid with deep balconies and a planted roof. Views open toward the sea and the mountains.

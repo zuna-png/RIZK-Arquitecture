@@ -1,0 +1,11 @@
+orden: 8
+tipo: visualizacion
+categoria: vivienda-vertical
+vista: exterior
+portada: ./img/coronado.jpg
+es:
+  titulo: Coronado
+  descripcion: Torre residencial de fachada modulada. Al caer la tarde, la luz cálida de los interiores dibuja la retícula del edificio.
+en:
+  titulo: Coronado
+  descripcion: A residential tower with a modular façade. At dusk, the warm interior light traces the building's grid.

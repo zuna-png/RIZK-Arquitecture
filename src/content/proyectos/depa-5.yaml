@@ -1,0 +1,11 @@
+orden: 14
+tipo: visualizacion
+categoria: interiorismo
+vista: interior
+portada: ./img/depa-5.jpg
+es:
+  titulo: Departamento 5
+  descripcion: Cocina integrada con barra de piedra oscura y gabinetes de madera. Un gran ventanal abre el departamento hacia la ciudad.
+en:
+  titulo: Apartment 5
+  descripcion: An integrated kitchen with a dark stone counter and timber cabinetry. A large window opens the apartment to the city.

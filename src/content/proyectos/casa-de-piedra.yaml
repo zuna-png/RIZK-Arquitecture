@@ -1,0 +1,11 @@
+orden: 9
+tipo: visualizacion
+categoria: residencial
+vista: exterior
+portada: ./img/casa-de-piedra.jpg
+es:
+  titulo: Casa de Piedra
+  descripcion: Dos volúmenes de piedra oscura unidos por una galería acristalada. El jardín corre bajo los voladizos y entra a la casa.
+en:
+  titulo: Stone House
+  descripcion: Two dark stone volumes joined by a glazed gallery. The garden runs beneath the overhangs and into the house.

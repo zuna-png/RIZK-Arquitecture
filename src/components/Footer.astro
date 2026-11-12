@@ -1,0 +1,84 @@
+---
+import Logo from './Logo.astro';
+import { languages, navOrder, path, useTranslations, type Lang, type RouteKey } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  current: RouteKey;
+}
+const { lang, current } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+
+// TODO: datos reales de contacto y redes del cliente.
+const email = 'hola@rizk.mx';
+const socials = [
+  { name: 'Instagram', href: 'https://instagram.com/' },
+  { name: 'Behance', href: 'https://behance.net/' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/' },
+];
+---
+
+<footer class="mt-auto bg-carbon text-marfil">
+  <div class="wrap grid gap-12 py-16 md:grid-cols-12 md:py-24">
+    <div class="md:col-span-6">
+      <p class="text-4xl font-light tracking-tight md:text-6xl">{t('footer.talk')}</p>
+      <a href={`mailto:${email}`} class="link-underline mt-6 inline-block text-lg text-marfil/80">
+        {email}
+      </a>
+    </div>
+
+    <nav aria-label="Footer" class="md:col-span-3">
+      <ul class="space-y-3">
+        {
+          navOrder.map((key) => (
+            <li>
+              <a href={path(key, lang)} class="label link-underline text-marfil/80 hover:text-marfil">
+                {t(`nav.${key}`)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <ul class="space-y-3 md:col-span-3">
+      {
+        socials.map((s) => (
+          <li>
+            <a href={s.href} target="_blank" rel="noopener" class="label link-underline text-marfil/80 hover:text-marfil">
+              {s.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="wrap flex flex-col gap-6 border-t border-marfil/15 py-8 md:flex-row md:items-center md:justify-between">
+    <Logo withTagline tagline={t('site.tagline')} />
+
+    <div class="flex items-center gap-4" role="group" aria-label={t('footer.language')}>
+      <span class="label text-marfil/50">{t('footer.language')}</span>
+      {
+        (Object.keys(languages) as Lang[]).map((code) => (
+          <a
+            href={path(current, code)}
+            hreflang={code}
+            lang={code}
+            class:list={[
+              'label link-underline',
+              code === lang ? 'text-marfil' : 'text-marfil/50 hover:text-marfil',
+            ]}
+            aria-current={code === lang ? 'true' : undefined}
+            data-astro-reload
+          >
+            {code.toUpperCase()}
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="label text-marfil/50">© {year} Rizk — {t('footer.rights')}</p>
+  </div>
+</footer>

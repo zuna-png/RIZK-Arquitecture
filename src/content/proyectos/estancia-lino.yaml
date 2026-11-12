@@ -1,0 +1,11 @@
+orden: 11
+tipo: visualizacion
+categoria: interiorismo
+vista: interior
+portada: ./img/estancia-lino.jpg
+es:
+  titulo: Estancia Lino
+  descripcion: Muros claros, carpintería de madera y un sofá empotrado de líneas bajas. La luz entra tamizada por cortinas de lino.
+en:
+  titulo: Linen Room
+  descripcion: Pale walls, timber joinery and a low built-in sofa. Light filters in through linen curtains.

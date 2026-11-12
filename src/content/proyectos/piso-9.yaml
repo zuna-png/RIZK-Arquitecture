@@ -1,0 +1,11 @@
+orden: 7
+tipo: visualizacion
+categoria: interiorismo
+vista: interior
+portada: ./img/piso-9.jpg
+es:
+  titulo: Piso 9
+  descripcion: Departamento de planta abierta con ventanales de piso a techo. Tonos neutros, madera y textiles ligeros enmarcan la vista de la ciudad.
+en:
+  titulo: Floor 9
+  descripcion: An open-plan apartment with floor-to-ceiling glazing. Neutral tones, timber and light fabrics frame the city view.

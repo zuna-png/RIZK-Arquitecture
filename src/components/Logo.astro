@@ -1,0 +1,14 @@
+---
+// Logotipo temporal en texto (Manrope Bold) hasta recibir el SVG oficial.
+interface Props {
+  withTagline?: boolean;
+  tagline?: string;
+  class?: string;
+}
+const { withTagline = false, tagline = '', class: className = '' } = Astro.props;
+---
+
+<span class:list={['inline-flex flex-col items-start leading-none', className]}>
+  <span class="text-[1.65rem] font-bold tracking-[-0.03em]">Rizk</span>
+  {withTagline && <span class="label mt-2 text-[0.55rem]">{tagline}</span>}
+</span>

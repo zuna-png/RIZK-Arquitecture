@@ -1,0 +1,11 @@
+orden: 12
+tipo: visualizacion
+categoria: comercial
+vista: interior
+portada: ./img/alcalde.jpg
+es:
+  titulo: Alcalde
+  descripcion: Bar nocturno de doble altura. Una cava iluminada y repisas de madera envuelven la barra en una luz cálida.
+en:
+  titulo: Alcalde
+  descripcion: A double-height night bar. An illuminated wine wall and timber shelving wrap the bar in warm light.

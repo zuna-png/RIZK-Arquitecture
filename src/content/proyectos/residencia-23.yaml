@@ -1,0 +1,13 @@
+# TODO: confirmar nombre, cliente, ubicación y año con el cliente.
+orden: 1
+tipo: visualizacion
+categoria: residencial
+vista: exterior
+portada: ./img/residencia-23.jpg
+encuadre: 50% 60%
+es:
+  titulo: Residencia 23
+  descripcion: Volúmenes de concreto y celosías de madera que se escalonan con la pendiente. La vegetación existente envuelve la casa y filtra la luz hacia las terrazas.
+en:
+  titulo: Residence 23
+  descripcion: Concrete volumes and timber screens stepping down with the slope. The existing trees wrap the house and filter light onto the terraces.
